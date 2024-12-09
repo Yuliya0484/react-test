@@ -1,14 +1,13 @@
 import usersData from "./assets/users.json";
-import User from "./components/users/user";
+import User from "./components/users/user.jsx";
 
 const App = () => {
   return (
-    <>
-      <User />
+    <div className="wrapper">
       {usersData.map((user) => (
         <User key={user.id} {...user} />
       ))}
-    </>
+    </div>
   );
 };
 
